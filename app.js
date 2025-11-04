@@ -3,12 +3,16 @@ const path = require('path');
 const app = express();
 
 //serve static files from public directory
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
-//route to serve index.html on the rrot path
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-})
+    res.send("Week One Assignment");
+});
+
+//route to serve index.html on the root path
+//app.get('index', (req, res) => {
+ //   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+//})
 
 const PORT = 3000;
 
